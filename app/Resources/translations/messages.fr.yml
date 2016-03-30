@@ -1,0 +1,14 @@
+# messages.fr.yml
+
+Hello World: Salut Monde
+Name: Nom
+Submit: Envoyer
+Email: Email
+Phone: Téléphone
+Message: Message
+
+app:
+    menu:
+        home: Accueil
+        about: A propos
+        contact: Contact
