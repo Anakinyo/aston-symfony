@@ -1,11 +1,17 @@
 # messages.fr.yml
 
+#front
 Hello World: Salut Monde
+Hello World Back: Salut Monde Back
 Name: Nom
 Submit: Envoyer
 Email: Email
 Phone: Téléphone
 Message: Message
+
+#Back
+Add article: Ajouter un article
+List articles: Lister les articles
 
 app:
     menu:
