@@ -1,0 +1,10 @@
+## YAML Template.
+---
+Disconnection: Déconnexion
+Hello World Back: Salut Monde Back
+
+blog:
+  label: Blog
+  post:
+    add: Nouveau post
+    list: Liste des posts

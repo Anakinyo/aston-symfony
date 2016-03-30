@@ -1,3 +1,24 @@
 aston_back_homepage:
-    path:     /
+    path:     /dashboard
     defaults: { _controller: AstonBackBundle:Default:index }
+
+aston_back_blog_add:
+    path:     /blog/post/add
+    defaults: { _controller: AstonBackBundle:Post:add }
+
+aston_back_blog_list:
+    path:     /blog/posts
+    defaults: { _controller: AstonBackBundle:Post:list }
+
+aston_back_blog_update:
+    path:     /blog/post/update/{id}
+    defaults: { _controller: AstonBackBundle:Post:update }
+    requirements:
+#      on attend un chiffre
+        id: \d+  
+
+aston_back_blog_delete:
+    path:     /blog/post/delete/{id}
+    defaults: { _controller: AstonBackBundle:Post:delete }
+    requirements:
+        id: \d+  
