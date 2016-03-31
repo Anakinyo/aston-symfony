@@ -2,6 +2,7 @@ aston_back_homepage:
     path:     /dashboard
     defaults: { _controller: AstonBackBundle:Default:index }
 
+#BLOG
 aston_back_blog_add:
     path:     /blog/post/add
     defaults: { _controller: AstonBackBundle:Post:add }
@@ -20,5 +21,38 @@ aston_back_blog_update:
 aston_back_blog_delete:
     path:     /blog/post/delete/{id}
     defaults: { _controller: AstonBackBundle:Post:delete }
+    requirements:
+        id: \d+  
+
+aston_back_blog_detail:
+    path:     /blog/post/detail/{id}
+    defaults: { _controller: AstonBackBundle:Post:detail }
+    requirements:
+        id: \d+  
+
+#CATEGORY
+aston_back_category_add:
+    path:     /category/add
+    defaults: { _controller: AstonBackBundle:Category:add }
+
+aston_back_category_list:
+    path:     /category
+    defaults: { _controller: AstonBackBundle:Category:list }
+
+aston_back_category_update:
+    path:     /category/update/{id}
+    defaults: { _controller: AstonBackBundle:Category:update }
+    requirements:
+        id: \d+  
+
+aston_back_category_delete:
+    path:     /category/delete/{id}
+    defaults: { _controller: AstonBackBundle:Category:delete }
+    requirements:
+        id: \d+  
+
+aston_back_category_detail:
+    path:     /category/detail/{id}
+    defaults: { _controller: AstonBackBundle:Category:detail }
     requirements:
         id: \d+  

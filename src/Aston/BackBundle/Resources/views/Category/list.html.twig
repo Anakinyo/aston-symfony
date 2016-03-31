@@ -1,0 +1,23 @@
+{% extends 'AstonBackBundle::layout.html.twig' %}
+
+{% block body %}
+  <h1>{{ 'categories list'|trans }}</h1>
+  
+  <table class="table">
+    <tr>
+      <th>#</th>
+      <th>{{ 'Name'|trans }}</th>
+      <th>{{ 'Action'|trans }}</th>
+    </tr>
+    {% for category in categories %}
+    <tr>
+      <td>{{ category.id }}</td>
+      <td>{{ category.name }}</td>
+      <td>
+        <a href="{{ path('aston_back_category_detail', {id: category.id}) }}" class="btn btn-xs btn-success">Voir</a>
+        <a href="{{ path('aston_back_category_update', {id: category.id}) }}" class="btn btn-xs btn-default">Edit</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock body %}

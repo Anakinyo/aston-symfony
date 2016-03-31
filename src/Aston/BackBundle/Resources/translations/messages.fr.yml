@@ -8,3 +8,6 @@ blog:
   post:
     add: Nouveau post
     list: Liste des posts
+  category:
+    add: Nouvelle catégorie
+    list: Liste des catégories

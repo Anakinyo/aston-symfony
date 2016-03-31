@@ -1,0 +1,38 @@
+{% extends 'AstonBackBundle::layout.html.twig' %}
+
+{% block body %}
+  <h1>{{ 'post detail'|trans }}</h1>
+
+  <table class="table">   
+    <tr>
+      <td colspan="8">
+        <a href="{{ path('aston_back_blog_update', {id: post.id}) }}" class="btn btn-xs btn-default">Editer</a>
+        <a href="{{ path('aston_back_blog_delete', {id: post.id}) }}" class="btn btn-xs btn-danger">Supprimer</a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{ 'Title'|trans }}</td>
+      <td>{{ post.title }}</td>
+      <td></td>
+      <td>{{ 'Date'|trans }}</td>
+      <td>{{ post.createdAt|date('d/m/Y') }}</td>
+      <td></td>
+      <td>{{ 'ID'|trans }}</td>
+      <td>{{ post.id }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{ 'Teaser'|trans }}</td>
+      <td colspan="6">{{ post.teaser }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{ 'Content'|trans }}</td>
+      <td colspan="6">{{ post.content }}</td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <a href="{{ path('aston_back_blog_update', {id: post.id}) }}" class="btn btn-xs btn-default">Editer</a>
+        <a href="{{ path('aston_back_blog_delete', {id: post.id}) }}" class="btn btn-xs btn-danger">Supprimer</a>
+      </td>
+    </tr>
+  </table>
+{% endblock body %}

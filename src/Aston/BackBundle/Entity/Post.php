@@ -3,6 +3,7 @@
 namespace Aston\BackBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Post
@@ -24,6 +25,8 @@ class Post
     /**
      * @var string
      *
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=255)
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
@@ -31,6 +34,8 @@ class Post
     /**
      * @var string
      *
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=400)
      * @ORM\Column(name="teaser", type="text")
      */
     private $teaser;
@@ -38,6 +43,8 @@ class Post
     /**
      * @var string
      *
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2)
      * @ORM\Column(name="content", type="text")
      */
     private $content;
@@ -45,6 +52,7 @@ class Post
     /**
      * @var bool
      *
+     * @Assert\Type(type="boolean")
      * @ORM\Column(name="published", type="boolean")
      */
     private $published;
@@ -52,6 +60,7 @@ class Post
     /**
      * @var \DateTime
      *
+     * @Assert\Date()
      * @ORM\Column(name="createdAt", type="date")
      */
     private $createdAt;

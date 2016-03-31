@@ -21,14 +21,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Symfony</a>
+            <a class="navbar-brand" href="{{ path('aston_front_homepage') }}">Symfony</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="/admin/dashboard">{{ 'Connection'|trans }} <span class="sr-only">(current)</span></a></li>
-              <li class="active"><a href="{{ path('aston_front_homepage') }}">{{ 'app.menu.home'|trans }} <span class="sr-only">(current)</span></a></li>
+              <li><a href="{{ path('aston_back_homepage') }}">{{ 'Connection'|trans }} <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="{{ path('aston_back_homepage') }}">{{ 'app.menu.home'|trans }} <span class="sr-only">(current)</span></a></li>
               <li><a href="#">{{ 'app.menu.about'|trans }}</a></li>              
               <li><a href="{{ path('aston_front_contact') }}">{{ 'app.menu.contact'|trans }}</a></li>      
             </ul>

@@ -18,16 +18,12 @@ use Symfony\Component\Form\FormBuilderInterface;
  *
  * @author dev
  */
-class PostType extends AbstractType
+class CategoryType extends AbstractType
 {
 
   public function buildForm(FormBuilderInterface $builder, array $options)
   {
-    $builder->add('title', null, ['label' => 'Titre'])
-            ->add('teaser', null, ['label' => 'teaser'])
-            ->add('content', null, ['label' => 'contenu'])
-            ->add('published', null, ['required' => false])
-            ->add('createdAt', DateType::class)
+    $builder->add('name', null, ['label' => 'Nom'])
             ->add('save', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary'

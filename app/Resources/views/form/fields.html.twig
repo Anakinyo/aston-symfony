@@ -1,0 +1,17 @@
+{% use 'form_div_layout.html.twig' %}
+
+{# {% form_theme form _self %} #}
+
+{% block form_row %}
+  <div class="form-group">
+    {{ form_label(form) }}
+    {{ form_widget(form) }}
+    {{ form_errors(form) }}
+  </div>
+{% endblock %}
+
+{% block form_widget_simple %}
+  {% set attr = attr|merge({'class': (attr.class|default('') ~ ' form-control')|trim }) %}
+  {{ parent() }}
+{% endblock %}
+
