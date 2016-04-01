@@ -1,4 +1,15 @@
+parameters:
+  hello.class: Aston\BackBundle\Service\Hello
+
 services:
 #    aston_back.example:
 #        class: Aston\BackBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+
+
+  aston_back.hello:
+    class: %hello.class%
+    arguments: 
+      - "toto"
+      - "@session"
+  

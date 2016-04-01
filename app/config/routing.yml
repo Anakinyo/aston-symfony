@@ -1,3 +1,6 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
 aston_back:
     resource: "@AstonBackBundle/Resources/config/routing.yml"
     prefix:   /admin/

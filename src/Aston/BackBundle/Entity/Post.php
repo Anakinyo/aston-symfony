@@ -2,6 +2,8 @@
 
 namespace Aston\BackBundle\Entity;
 
+use Aston\BackBundle\Entity\Category;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -58,7 +60,7 @@ class Post
     private $published;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      *
      * @Assert\Date()
      * @ORM\Column(name="createdAt", type="date")
@@ -67,6 +69,8 @@ class Post
 
     /**
      * @var \Category
+     * 
+     * @ORM\ManyToOne(targetEntity="Category")
      */
     private $category;
 
@@ -180,7 +184,7 @@ class Post
     /**
      * Set createdAt
      *
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return Post
      */
@@ -194,7 +198,7 @@ class Post
     /**
      * Get createdAt
      *
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -206,7 +210,7 @@ class Post
      *
      * @param Category $category
      *
-     * @return \Aston\BackBundle\Entity\Post
+     * @return Post
      */
     public function setCategory($category)
     {
