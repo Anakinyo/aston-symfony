@@ -65,6 +65,11 @@ class Post
      */
     private $createdAt;
 
+    /**
+     * @var \Category
+     */
+    private $category;
+
 
     /**
      * Get id
@@ -194,6 +199,30 @@ class Post
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+    
+    /**
+     * Set the category
+     *
+     * @param Category $category
+     *
+     * @return \Aston\BackBundle\Entity\Post
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Returns the category
+     *
+     * @return Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
 
